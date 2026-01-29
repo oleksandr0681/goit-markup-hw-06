@@ -194,6 +194,7 @@ header {
 .section-hero {
     margin: 0 auto;
     padding: 72px 0;
+    max-width: 320px;
     background-color: #2e2f42;
     background-image: linear-gradient(
             to bottom, 
@@ -283,7 +284,7 @@ header {
 .features-card-title {
     margin-bottom: 8px ;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 2.25rem;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -291,6 +292,7 @@ header {
 }
 
 .features-card-text {
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
@@ -300,9 +302,12 @@ header {
     background-color: #f4f4fd;
 }
 
+.team-container {
+    padding: 0 28px;
+}
+
 .team-list {
     margin-top: 72px;
-    padding: 0 12px;
     display: flex;
     justify-content: center;
     gap: 72px;
@@ -379,15 +384,9 @@ header {
 .project-card {
     background-color: #fff;
     flex-basis: 100%;
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover, .project-card:focus {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .project-card-image-wrapper {
@@ -912,6 +911,7 @@ footer {
 
     .section-hero {
         padding: 112px 136px;
+        max-width: 768px;
         background-image: linear-gradient(
             to bottom, 
             rgba(46, 47, 66, 0.7),
@@ -941,11 +941,13 @@ footer {
     
     .features-card-title {
         text-align: left;
-        font-weight: 700;
+    }
+
+    .team-container {
+        padding: 0 108px;
     }
 
     .team-list {
-        padding: 0 92px;
         gap: 64px 24px;
     }
 
@@ -991,13 +993,18 @@ footer {
         text-align: left;
     }
 
+    .footer-form {
+        display: flex;
+        align-items: baseline;
+        column-gap: 24px;
+    }
+
     .footer-input {
         width: 264px;
     }
 
     .footer-form-button {
-        margin-left: 24px;
-        display: inline;
+        margin: 0;
     }
 
     .modal {
@@ -1038,14 +1045,6 @@ footer {
 
     .features-card-list {
         justify-content: space-between;
-    }
-    
-    .features-card-title {
-        font-weight: 700;
-    }
-
-    .features-card-text {
-        font-weight: 500;
     }
 }
 
@@ -1109,11 +1108,16 @@ footer {
 
     .features-card-title {
         margin: 8px 0;
+        font-weight: 500;
         font-size: 1.25rem;
         line-height: 1.2;
     }
 
-    .team-list {
+    .features-card-text {
+        font-weight: 400;
+    }
+
+    .team-container {
         padding: 0;
     }
 
@@ -1127,9 +1131,19 @@ footer {
     }
 
     .project-card {
-        flex-basis: calc((100% - 48px) / 3);;
+        flex-basis: calc((100% - 48px) / 3);
+        box-shadow: none;
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    .project-card:hover, .project-card:focus {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+ 
     .footer-container {
         justify-content: space-between;
         gap: 0;
