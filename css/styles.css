@@ -921,6 +921,10 @@ footer {
         display: none;
     }
 
+    .menu-mobile {
+        display: none;
+    }
+
     .section-hero {
         padding: 112px 0;
         max-width: 768px;
