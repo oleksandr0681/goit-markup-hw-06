@@ -111,6 +111,7 @@ header {
     padding: 24px 24px 40px 16px;
     position: relative;
     height: 100%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
