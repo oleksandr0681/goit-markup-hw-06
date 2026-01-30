@@ -831,6 +831,10 @@ footer {
         max-width: 768px;
     }
 
+    .header-container {
+        align-items: center;
+    }
+
     .logo {
         padding-top: 24px;
         padding-bottom: 24px;
@@ -888,20 +892,27 @@ footer {
         display: block;
     }
 
-    .address-list a {
+    .address-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 12px;
+    }
+
+    .address-item a {
         display: block;
-        padding: 24px 0;
-        font-size: 1rem;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
+        font-size: 0.75rem;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
         color: #434455;
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .address-list a:hover,
-    .address-list a:focus {
+    .address-item a:hover,
+    .address-item a:focus {
         color: #404bbf;
     }
 
@@ -910,7 +921,7 @@ footer {
     }
 
     .section-hero {
-        padding: 112px 136px;
+        padding: 112px 0;
         max-width: 768px;
         background-image: linear-gradient(
             to bottom, 
@@ -923,6 +934,7 @@ footer {
 
     .page-title {
         padding: 0;
+        max-width: 496px;
         font-size: 3.5rem;
         line-height: 1.07;
     }
@@ -1024,25 +1036,9 @@ footer {
                 url(../images/tablet/people-office-tablet-2x.jpg);
         }
     }
-
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
-    .header-container {
-        align-items: center;
-    }
-
-    .address-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .address-item a {
-        padding: 0;
-    }
-
     .features-card-list {
         justify-content: space-between;
     }
@@ -1059,8 +1055,16 @@ footer {
     }
 
     .address-list {
-        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 40px;
+    }
+
+    .address-item a {
+        padding: 24px 0;
+        font-size: 1rem;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
     }
     
     .section {
@@ -1077,10 +1081,6 @@ footer {
             ),
             
             url(../images/main/people-office.jpg);
-    }
-
-    .page-title {
-        max-width: 496px;
     }
 
     .hero-button {
@@ -1118,13 +1118,12 @@ footer {
     }
 
     .team-container {
-        padding: 0;
+        padding: 0 15px;
     }
 
     .team-card {
         flex-basis: calc((100% - 72px) / 4);
     }
-
 
     .project-list {
         gap: 48px 24px;
@@ -1157,7 +1156,6 @@ footer {
     .footer-subscribe {
         margin-left: auto;
     }
-
 
     @media (min-resolution: 2x) {
         .section-hero {
